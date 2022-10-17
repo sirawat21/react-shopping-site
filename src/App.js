@@ -1,39 +1,38 @@
+import "./categories.style.scss";
 const App = () => {
   const categories = [
     {
       id: 1,
-      title: 'Hats',
+      title: "Hats",
     },
     {
       id: 2,
-      title: 'Jackets',
+      title: "Jackets",
     },
     {
       id: 3,
-      title: 'Sneakers',
+      title: "Sneakers",
     },
     {
       id: 4,
-      title: 'Womens',
+      title: "Womens",
     },
     {
       id: 5,
-      title: 'Mens',
+      title: "Mens",
     },
-  ]
+  ];
   return (
     <div className="categories-container">
-      {
-        categories.map( (category, key) => (
-          <div className="category-container" key={key}>
-          {/* <img src={}/> */}
-          <div className="category-container-body">
-            <h2>{category.title}</h2>
+      {categories.map(({ title, id }) => (
+        <div className="category-container" key={id}>
+          <div className="background-image" />
+          <div className="category-body-container">
+            <h2>{title}</h2>
             <p>Shop Now</p>
           </div>
         </div>
-        ))
-      }
+      ))}
     </div>
   );
 };
