@@ -1,10 +1,12 @@
 import { initializeApp } from "firebase/app";
+// Firebase auth
 import {
   getAuth,
   signInWithRedirect,
   signInWithPopup,
   GoogleAuthProvider,
 } from "firebase/auth";
+// Firestore
 import {
     getFirestore,
     doc,
