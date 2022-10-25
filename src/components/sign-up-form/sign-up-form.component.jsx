@@ -8,12 +8,13 @@ const defaultFormFields = {
 };
 
 const SignUpForm = () => {
-  const [formFields, setFormFields] = useState(defaultFormFields);
-  const { displayName, email, password, confirmPassword } = formFields;
+  const [formFileds, setFormFields] = useState(defaultFormFields);
+  const { displayName, email, password, confirmPassword } = formFileds;
 
   const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormFields({...formFields, [name]: value})
+    const {name, value} = event.target;
+    setFormFields({...formFileds, [name]: value});
+    console.log(formFileds);
   };
 
   return (
@@ -55,7 +56,6 @@ const SignUpForm = () => {
           name="confirmPassword"
           value={confirmPassword}
         />
-
         <button type="submit">Sign Up</button>
       </form>
     </div>
