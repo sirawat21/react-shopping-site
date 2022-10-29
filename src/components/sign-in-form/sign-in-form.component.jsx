@@ -1,51 +1,46 @@
 import { useState } from "react";
 import {
+  auth,
+  signInWithGooglePopup,
   createAuthUserWithEmailAndPassword,
+  signInAuthUserWithEmailAndPassword,
   createUserDocumentFromAuth,
 } from "../../utils/firebase/firebase.utils";
 import FormInput from "../form-input/form-input.component";
 import Button from "../button/button.component";
-import "./sign-up-form.style.scss";
-
+import "./sign-in-form.style.scss";
 
 const defaultFormFields = {
-  displayName: "",
   email: "",
   password: "",
-  confirmPassword: "",
 };
 
-const SignUpForm = () => {
+const SignInForm = () => {
   const [formFileds, setFormFields] = useState(defaultFormFields);
-  const { displayName, email, password, confirmPassword } = formFileds;
+  const { email, password } = formFileds;
 
   // Reset form fields
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
   };
 
+  // Sing with Google
+  const SignInWithGoogle = async () => {
+    const { user } = await signInWithGooglePopup();
+    const userDocRef = await createUserDocumentFromAuth(user);
+  };
+
   // Submit handler
   const handleSubmit = async (event) => {
     event.preventDefault();
-    if (password !== confirmPassword) {
-      alert("Password do not match");
-      return;
-    }
     try {
-      const response = await createAuthUserWithEmailAndPassword(
+      const response = await signInAuthUserWithEmailAndPassword(
         email,
         password
       );
-      const { user } = response;
-      await createUserDocumentFromAuth(user, { displayName });
+      console.log(response);
       resetFormFields();
-    } catch (error) {
-      if (error.code == "auth/email-already-in-use") {
-        alert("Email is already in use");
-      } else {
-        console.log(`Submit form error: ${error.message}`);
-      }
-    }
+    } catch (error) {}
   };
 
   // Change handler
@@ -56,20 +51,9 @@ const SignUpForm = () => {
 
   return (
     <div className="sign-up-container">
-      <h2>Don't have an account?</h2>
-      <span>Sign up with your email and password</span>
+      <h2>Already have an account?</h2>
+      <span>Sign in with your email and password</span>
       <form onSubmit={handleSubmit}>
-        <FormInput
-          label="Display Name"
-          inputOptions={{
-            type: "text",
-            required: true,
-            onChange: handleChange,
-            name: "displayName",
-            value: displayName,
-          }}
-        />
-
         <FormInput
           label="Email"
           inputOptions={{
@@ -91,21 +75,15 @@ const SignUpForm = () => {
             value: password,
           }}
         />
-
-        <FormInput
-          label="Confirm password"
-          inputOptions={{
-            type: "password",
-            required: true,
-            onChange: handleChange,
-            name: "confirmPassword",
-            value: confirmPassword,
-          }}
-        />
-        <Button type="submit">Sign Up</Button>
+        <div className="buttons-container">
+          <Button type="submit">Sign Up</Button>
+          <Button buttonType="google" onClick={SignInWithGoogle}>
+            Sign in with Google
+          </Button>
+        </div>
       </form>
     </div>
   );
 };
 
-export default SignUpForm;
+export default SignInForm;
