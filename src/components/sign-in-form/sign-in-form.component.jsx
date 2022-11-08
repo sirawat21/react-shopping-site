@@ -6,7 +6,7 @@ import {
   signInAuthUserWithEmailAndPassword,
   createUserDocumentFromAuth,
 } from "../../utils/firebase/firebase.utils";
-import { UsertContext } from './../../contexts/user.context';
+import { UserContext } from './../../contexts/user.context';
 import FormInput from "../form-input/form-input.component";
 import Button from "../button/button.component";
 import "./sign-in-form.style.scss";
@@ -20,7 +20,7 @@ const SignInForm = () => {
   const [formFileds, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFileds;
   // Selected use context
-  const { setCurrentUser } = useContext(UsertContext);
+  const { setCurrentUser } = useContext(UserContext);
 
   // Reset form fields
   const resetFormFields = () => {
