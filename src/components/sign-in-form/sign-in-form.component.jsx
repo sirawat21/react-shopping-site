@@ -30,7 +30,9 @@ const SignInForm = () => {
   // Sing with Google
   const SignInWithGoogle = async () => {
     const { user } = await signInWithGooglePopup();
-    const userDocRef = await createUserDocumentFromAuth(user);
+    const userDocRef = await createUserDocumentFromAuth(user); 
+    // store user information into user context storage
+    setCurrentUser(user);
   };
 
   // Submit handler
