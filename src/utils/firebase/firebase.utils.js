@@ -7,7 +7,8 @@ import {
   signInWithEmailAndPassword,
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
-  signOut
+  signOut,
+  onAuthStateChanged,
 } from "firebase/auth";
 // Firestore
 import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
@@ -23,7 +24,8 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const firebaseApp = initializeApp(firebaseConfig);
+// const firebaseApp = initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 
 // Google provider configuration
 const googleProvider = new GoogleAuthProvider();
@@ -44,7 +46,7 @@ export const db = getFirestore();
 // Creating a new user from Google Auth
 export const createUserDocumentFromAuth = async (
   userAuth,
-  additionalInformation = {displayName: 'Annonymous'}
+  additionalInformation = { displayName: "Annonymous" }
 ) => {
   if (!userAuth) return;
   const userDocRef = doc(db, "users", userAuth.uid);
@@ -58,7 +60,7 @@ export const createUserDocumentFromAuth = async (
         displayName,
         email,
         createdAt,
-        ...additionalInformation
+        ...additionalInformation,
       });
     } catch (e) {
       console.log(`Error creating user: ${e.message}`);
@@ -81,3 +83,7 @@ export const signInAuthUserWithEmailAndPassword = async (email, password) => {
 
 // Sign Out user
 export const signOutUser = async () => await signOut(auth);
+
+// On aunthentication state has chage; even tricked after sign-in sign-out
+export const onAuthStateChangedListener = (callback) =>
+  onAuthStateChanged(auth, callback);
