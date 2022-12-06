@@ -2,15 +2,14 @@ import { createContext, useState } from "react";
 
 /* Helper cart added item */
 const addCartItem = (cartItems, productToAdd) => {
-   const existingCartItem = cartItems.find((cartItem) => cartItem.id == productToAdd.id);
+   const existingCartItem = cartItems.find(
+      (cartItem) => cartItem.id == productToAdd.id
+   );
    if(existingCartItem) {
-      return cartItems.map(cartItem => {
-         if (cartItem.id == productToAdd.id) {
-            return {...cartItem, quantity: cartItem.quantity + 1}
-         } else {
-            return cartItem
-         }
-      });
+      return cartItems.map((cartItem) => (cartItem.id == productToAdd.id) 
+         ? {...cartItem, quantity: cartItem.quantity + 1}
+         : cartItem
+      );
    }
    return [...cartItems, { ...productToAdd, quantity: 1}];
 }
