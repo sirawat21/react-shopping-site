@@ -4,6 +4,7 @@ import Home from "./routes/home/home.component";
 import Authentication from "./routes/authentication/authentication.component";
 import Shop from "./routes/shop/shop.component";
 
+
 const App = () => {
   return (
     <Routes>
