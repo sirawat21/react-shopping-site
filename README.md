@@ -5,7 +5,7 @@ The website has developed by two core technologies; ReactJS and Firebase. This i
 ## Live demo
 |Host|URL|
 |---|---|
-|Firebase|null|
+|Firebase|https://react-shopping-site-cc6d4.web.app|
 ## Task:
 - [x] Routing: Home, SignUp&SignIn, Shop
 - [x] Database: Handler function of Firebase Libaray, Firestore, Firebase Auth
