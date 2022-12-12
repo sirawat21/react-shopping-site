@@ -29,7 +29,7 @@ export const CartProvider = ({ children }) => {
       setCartItems(addCartItem(cartItems, productToAdd));
    };
    const [isCartOpen, setIsCartOpen] = useState(false);
-   const [carthCount, setCartCount] = useState(0);
+   const [carthCount, setCartCount] = useState(0)
 
    // watching when cartItem has changed then recount
    useEffect(() => {
@@ -40,6 +40,6 @@ export const CartProvider = ({ children }) => {
       setCartCount(newCartCount);
    }, [cartItems]);
 
-   const value = { isCartOpen, setIsCartOpen, addItemToCart, cartItems };
+   const value = { isCartOpen, setIsCartOpen, addItemToCart, cartItems, carthCount };
    return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 };
