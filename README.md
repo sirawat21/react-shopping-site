@@ -1,5 +1,5 @@
-### Demostrate Shopping Site with ReactJS Libarary
-
+# Demostrate Shopping Site with ReactJS Libarary
+[![Build](https://github.com/sirawat21/react-shopping-site/actions/workflows/github-actions-build.yml/badge.svg)](https://github.com/sirawat21/react-shopping-site/actions/workflows/github-actions-build.yml)
 [build status soon]
 ## Description
 The website has developed by two core technologies; ReactJS and Firebase. This is a practicing project for demonstrating a serverless web application. Also the common core features of shoping site are available such as authentication, shopping cart, checkout item.
