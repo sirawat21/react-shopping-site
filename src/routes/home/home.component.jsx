@@ -1,9 +1,9 @@
 import Directory from "../../components/directory/directory.component";
-import hats from "../../assets/images/hats.png";
-import jackets from "../../assets/images/jackets.png";
-import men from "../../assets/images/men.png";
-import sneakers from "../../assets/images/sneakers.png";
-import womens from "../../assets/images/womens.png";
+import hats from "../../assets/image/category/hats.png";
+import jackets from "../../assets/image/category/jackets.png";
+import men from "../../assets/image/category/men.png";
+import sneakers from "../../assets/image/category/sneakers.png";
+import womens from "../../assets/image/category/womens.png";
 
 const Home = () => {
   const categories = [
