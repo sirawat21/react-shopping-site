@@ -8,13 +8,13 @@ The website has developed by two core technologies; ReactJS and Firebase. This i
 |---|---|
 |Firebase|null|
 ## Task:
-- [x] Routing: to site main pages; Home, SignUp&SignIn, Shop
-- [x] Database: handler of Firebase Libaray, Firestore, Firebase Auth
-- [x] Page: Home; showing a category of items
-- [x] Page: signIn&singUp; Email&Password, Gmail Login API
-- [ ] Page Shop for display items
-- [ ] Page: Making a payment
-- [x] Feature: dropdown cart for displaying a selected item
+- [x] Routing: Home, SignUp&SignIn, Shop
+- [x] Database: Handler function of Firebase Libaray, Firestore, Firebase Auth
+- [x] Home Page: Showing a category of items
+- [x] Authentication Shop: Sign-In and Sing-Up with EmailPassword and Gmail Login API
+- [ ] Shop Page: Displaying items
+- [ ] Payment Page: Process a payment of the order
+- [x] Feature: Dropdown cart for displaying a selected item
 - [ ] Feature: Checkout item in cart
 
 ## References
