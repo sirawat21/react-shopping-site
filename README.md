@@ -2,20 +2,20 @@
 
 [build status soon]
 ## Description
-The website has developed two core technologies; ReactJS and Firebase. This is a practicing project for demonstrating a serverless web application. Also the common core features of shoping site are available such as authentication, shopping cart, checkout item.
+The website has developed by two core technologies; ReactJS and Firebase. This is a practicing project for demonstrating a serverless web application. Also the common core features of shoping site are available such as authentication, shopping cart, checkout item.
 ## Live demo
 |Host|URL|
 |---|---|
-|Firebase|http://universities.hipolabs.com/search?country=Australia|
+|Firebase|null|
 ## Task:
 - [x] Routing: to site main pages; Home, SignUp&SignIn, Shop
 - [x] Database: handler of Firebase Libaray, Firestore, Firebase Auth
 - [x] Page: Home; showing a category of items
 - [x] Page: signIn&singUp; Email&Password, Gmail Login API
-- [] Page Shop for display items
-- [] Page: Making a payment
+- [ ] Page Shop for display items
+- [ ] Page: Making a payment
 - [x] Feature: dropdown cart for displaying a selected item
-- [] Feature: Checkout item in cart
+- [ ] Feature: Checkout item in cart
 
 ## References
 - React [sorce](https://reactjs.org/docs/getting-started.html)
