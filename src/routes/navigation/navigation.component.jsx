@@ -15,7 +15,7 @@ const Navigation = () => {
     <Fragment>
       <div className="navigation">
         <Link className="logo-container" to="/">
-          <img src={ReactLogo} className="logo" />
+          <img src={ReactLogo} className="logo" alt="site-logo"/>
         </Link>
         <div className="nav-links-container">
           <Link className="nav-link" to="/shop">
