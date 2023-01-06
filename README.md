@@ -11,7 +11,7 @@ The website has developed by two core technologies; ReactJS and Firebase. This i
 - [x] Database: Handler function of Firebase Libaray, Firestore, Firebase Auth
 - [x] Home Page: Showing a category of items
 - [x] Authentication Shop: Sign-In and Sing-Up with EmailPassword and Gmail Login API
-- [ ] Shop Page: Displaying items
+- [x] Shop Page: Displaying items
 - [ ] Payment Page: Process a payment of the order
 - [x] Feature: Dropdown cart for displaying a selected item
 - [ ] Feature: Checkout item in cart
