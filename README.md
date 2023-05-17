@@ -22,5 +22,4 @@ The website has developed by two core technologies; ReactJS and Firebase. This i
 - React Redux [sorce](https://www.npmjs.com/package/react-redux)
 - Redux [sorce](https://redux.js.org/introduction/getting-started)
 - Redux Logger [sorce](https://www.npmjs.com/package/redux-logger)
-- Firebase FileStore [sorce](https://firebase.google.com/docs/firestore/query-data/get-data)
 - Firebase Auth [source](https://firebase.google.com/docs/auth/web/start)
